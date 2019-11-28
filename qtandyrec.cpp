@@ -50,6 +50,6 @@ bool QtAndyRec::start_recording(QString path) {
 }
 
 void QtAndyRec::stop_recording() {
-    if (this->audio->state() == QAudio::StoppedState)
+    if (this->audio->state() != QAudio::StoppedState)
         this->audio->stop();
 }
